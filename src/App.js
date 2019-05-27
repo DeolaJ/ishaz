@@ -1,26 +1,54 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, createRef } from 'react'
+import './App.scss'
+import Nav from '../src/components/Nav/Nav'
+import { BrowserRouter as Router } from 'react-router-dom'
+import Body from '../src/components/Body/Body'
+import Footer from '../src/components/Footer/Footer'
+import 'semantic-ui-css/semantic.min.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  // constructor(props) {
+  //   super(props);
+  // }
+  
+  // scrollDown = (event) => {
+  //   event.preventDefault()
+  //   if (window.offsetTop === 0){
+  //     window.scrollTo(0, this.myRef.current.offsetTop);
+  //   }
+  // }
+
+  state = {
+    refs: {}
+  }
+
+  createNavRef = (arr) => {
+    const refs = arr.reduce((acc, value) => {
+      acc[value.id] = createRef();
+      return acc;
+    }, {});
+
+    this.setState({
+      refs: refs
+    })
+  }
+
+  render () {
+    const { refs } = this.state
+
+    return (
+      <div className={'body'}>
+
+        <Router basename={'/'}>
+          <Nav createNavRef={this.createNavRef} refs={refs} />
+          <Body refs={refs} />
+        </Router>
+        
+        <Footer/>
+      </div>
+    )
+  }
 }
 
 export default App;

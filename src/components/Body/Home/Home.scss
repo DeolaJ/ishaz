@@ -1,0 +1,54 @@
+.home-container {
+
+  .ui.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    text-transform: uppercase;
+  }
+
+  .back-to-top {
+    display: inline-block;
+    text-align: center;
+    background-color: rgb(130, 130, 130);
+    color: white;
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    border-radius: 50%;
+    bottom: 50px;
+    left: 50%;
+    animation: bounce 0.8s linear;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    backface-visibility: hidden;
+
+    i {
+      line-height: 30px;
+      margin-top: 3px;
+      margin-left: 5px;
+    }
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(-1px);
+    }
+
+    50% {
+      transform: translateY(1px);
+    }
+
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  .back-to-top:hover {
+    background-color: white;
+    border: 1px solid rgb(130, 130, 130);
+    color: rgb(130, 130, 130);
+  }
+}
