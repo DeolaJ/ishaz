@@ -8,7 +8,7 @@ class Gallery extends Component {
     return (
       <Grid stackable className={'gallery-container'} style={{minHeight: '100vh'}}>
         <Grid.Column width={16}>
-          <div>Galllery</div>
+          <div>Gallery</div>
         </Grid.Column>
       </Grid>
     )

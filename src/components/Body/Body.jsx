@@ -20,13 +20,27 @@ class Body extends Component {
         { refs !== {} &&
           <Grid stackable>
             <Grid.Column width={16}>
-              <Home ref={refs[1]} />
-              <About ref={refs[2]} />
-              <Projects ref={refs[4]} />
-              <Services ref={refs[5]} />
-              <TheTeam ref={refs[3]} />
-              <Gallery ref={refs[6]} />
-              <Contact ref={refs[7]} />
+              <section ref={refs[1]}>
+                <Home/>
+              </section>
+              <section ref={refs[2]}>
+                <About/>
+              </section>
+              <section ref={refs[3]}>
+                <Services/>
+              </section>
+              <section ref={refs[4]}>
+                <Projects/>
+              </section>
+              <section ref={refs[5]}>
+                <TheTeam/>
+              </section>
+              <section ref={refs[6]}>
+                <Gallery/>
+              </section>
+              <section ref={refs[7]}>
+                <Contact/>
+              </section>
             </Grid.Column>
           </Grid>
         }

@@ -20,7 +20,56 @@ class App extends Component {
   // }
 
   state = {
-    refs: {}
+    refs: {},
+    navItems: [
+      {
+        id: 1,
+        name: 'Home',
+        link: '/',
+        icon: 'home'
+      },
+      {
+        id: 2,
+        name: 'About Us',
+        link: '/about',
+        icon: 'user'
+      },
+      {
+        id: 3,
+        name: 'Services',
+        link: '/services',
+        icon: 'bar'
+      },
+      {
+        id: 4,
+        name: 'Projects',
+        link: '/projects',
+        icon: 'bar'
+      },
+      {
+        id: 5,
+        name: 'The Team',
+        link: '/ourteam',
+        icon: 'bar'
+      },
+      {
+        id: 6,
+        name: 'Gallery',
+        link: '/gallery',
+        icon: 'bar'
+      },
+      {
+        id: 7,
+        name: 'Contact Us',
+        link: '/contact',
+        icon: 'phone'
+      }
+    ]
+  }
+
+  componentDidMount () {
+    const { navItems } = this.state
+    this.createNavRef(navItems)
   }
 
   createNavRef = (arr) => {
@@ -35,13 +84,13 @@ class App extends Component {
   }
 
   render () {
-    const { refs } = this.state
+    const { refs, navItems } = this.state
 
     return (
       <div className={'body'}>
 
         <Router basename={'/'}>
-          <Nav createNavRef={this.createNavRef} refs={refs} />
+          <Nav navItems={navItems} refs={refs} />
           <Body refs={refs} />
         </Router>
         
