@@ -13,7 +13,6 @@ class Nav extends Component {
   }
 
   componentDidMount () {
-    console.log(this.state.scrolling)
     window.addEventListener('scroll', this.handleScroll);
   }
 

@@ -1,3 +1,8 @@
-.projects-container {
+.ui.grid.projects-container {
   padding-top: 80px !important;
+
+  .ui.card {
+    height: 25vw;
+    width: 25vw;
+  }
 }
