@@ -1,3 +1,11 @@
 .services-container {
   padding-top: 80px !important;
+
+  .ui.segments {
+
+    > .ui.segment {
+      width: 25%;
+      display: inline-block;
+    }
+  }
 }
