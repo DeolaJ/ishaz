@@ -71,11 +71,12 @@ class TheTeam extends Component {
 
   render () {
     const { images } = this.state
+    const { mobile } = this.props
 
     const right = 'right'
     const left = 'left'
     return (
-      <Grid stackable className={'theteam-container'} style={{minHeight: '100vh'}}>
+      <Grid stackable className={'section theteam-container'} style={{minHeight: '100vh'}}>
         <Grid.Column width={16}>
           <Arrow name='chevron left' click={this.moveLeft} position={left} />
           <Arrow name='chevron right' click={this.moveRight} position={right} />

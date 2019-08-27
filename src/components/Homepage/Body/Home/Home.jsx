@@ -3,13 +3,20 @@ import { Grid, Header, Container, Icon } from 'semantic-ui-react'
 import './Home.scss'
 
 class Home extends Component {
-  scrollDown = (event) => {
-    event.preventDefault()
+  scrollToNext = () => {
+    const { refs } = this.props
+
+    refs[2].current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
   }
 
   render () {
+    const { mobile, refs } = this.props
+
     return (
-      <Grid stackable className={'home-container'} style={{minHeight: '100vh'}}>
+      <Grid stackable className={'section home-container'} style={{minHeight: '100vh'}}>
         <Grid.Column width={16}>
           <Container textAlign='center' style={{height: '100%'}}>
             <Header>
@@ -17,9 +24,9 @@ class Home extends Component {
               to <br/>
               Ishaz Real Estate
             </Header>
-            <a id="back-to-top" href={'/'} className="back-to-top" role="button" onClick={this.scrollDown}>
+            <button id="back-to-top" className="back-to-top" onClick={this.scrollToNext}>
               <Icon name='chevron down' />
-            </a>
+            </button>
           </Container>
         </Grid.Column>
       </Grid>

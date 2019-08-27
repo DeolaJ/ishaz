@@ -5,8 +5,10 @@ import './Projects.scss'
 class Projects extends Component {
 
   render () {
+    const { mobile } = this.props
+
     return (
-      <Grid stackable className={'projects-container'} style={{minHeight: '100vh'}}>
+      <Grid stackable className={'section projects-container'} style={{minHeight: '100vh'}}>
         <Grid.Column width={16}>
           <Container>
             <Header as='h2' textAlign='center'>Ongoing Projects</Header>

@@ -6,7 +6,7 @@ class About extends Component {
 
   render () {
     return (
-      <Grid stackable className={'about-container'} style={{minHeight: '100vh'}}>
+      <Grid stackable className={'section about-container'} style={{minHeight: '100vh'}}>
         <Grid.Column width={16}>
           <Container>
             <Grid.Row>

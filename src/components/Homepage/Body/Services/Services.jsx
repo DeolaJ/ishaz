@@ -5,8 +5,10 @@ import './Services.scss'
 class Services extends Component {
 
   render () {
+    const { mobile } = this.props
+
     return (
-      <Grid stackable className={'services-container'} style={{minHeight: '100vh'}}>
+      <Grid stackable className={'section services-container'} style={{minHeight: '100vh'}}>
         <Grid.Column width={16}>
         <Container>
             <Header as='h2' textAlign='center'>Our Services</Header>

@@ -13,33 +13,33 @@ class Body extends Component {
 
   render () {
 
-    const { refs } = this.props
+    const { refs, handleSidebar, mobile } = this.props
 
     return (
-      <main className={'mainbody'} style={{width: '100%'}}>
+      <main className={'mainbody'} onClick={handleSidebar} style={{width: '100%'}}>
         { refs !== {} &&
           <Grid stackable>
             <Grid.Column width={16}>
               <section ref={refs[1]}>
-                <Home/>
+                <Home mobile={mobile} refs={refs}/>
               </section>
               <section ref={refs[2]}>
-                <About/>
+                <About mobile={mobile}/>
               </section>
               <section ref={refs[3]}>
-                <Services/>
+                <Services mobile={mobile}/>
               </section>
               <section ref={refs[4]}>
-                <Projects/>
+                <Projects mobile={mobile}/>
               </section>
               <section ref={refs[5]}>
-                <TheTeam/>
+                <TheTeam mobile={mobile}/>
               </section>
               <section ref={refs[6]}>
-                <Gallery/>
+                <Gallery mobile={mobile}/>
               </section>
               <section ref={refs[7]}>
-                <Contact/>
+                <Contact mobile={mobile}/>
               </section>
             </Grid.Column>
           </Grid>
