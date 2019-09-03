@@ -1,12 +1,10 @@
-.home-container {
+.ui.grid.home-container {
+  padding: 15rem 0 5rem;
 
-  .ui.header {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 45px;
-    text-transform: uppercase;
+  p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 2rem;
   }
 
   .back-to-top {

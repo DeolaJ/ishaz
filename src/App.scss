@@ -4,10 +4,12 @@
   position: relative;
   *:not(.icon) {
     font-family: 'Asap', 'Lato', sans-serif !important;
+    color: white;
 
     h1, h2, h3, h4, h5, h6, .ui.header,
     .header {
       font-family: 'Asap Condensed', 'Lato', sans-serif !important;
+      color: white;
 
       &.section-header {
         font-size: 30px !important;
@@ -18,7 +20,7 @@
 
       h1.header {
         line-height: 1.1em;
-        font-size: 57px;
+        font-size: 3.5rem;
         margin-top: 0;
         margin-bottom: 20px;
         font-weight: 400;
@@ -28,6 +30,7 @@
         margin-bottom: 30px;
         line-height: 1.2em;
         font-weight: 400;
+        font-size: 2.4rem;
       }
   
       h2.header {
@@ -35,7 +38,25 @@
         margin-top: 0;
         margin-bottom: 20px;
         font-weight: 400;
+        font-size: 2.8rem;
         letter-spacing: normal;
+
+        &.section-title {
+          position: relative;
+          padding-bottom: 1rem;
+          margin-bottom: 2rem;
+        
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            border-radius: 10px;
+            width: 30px;
+            background: #fff;
+          }
+        }
       }
   
       @media (max-width: 768px) {

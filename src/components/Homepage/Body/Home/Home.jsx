@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Grid, Header, Container, Icon } from 'semantic-ui-react'
+import { Grid, Header, Container, Icon, Button } from 'semantic-ui-react'
 import './Home.scss'
 
 class Home extends Component {
@@ -18,12 +18,19 @@ class Home extends Component {
     return (
       <Grid stackable className={'section home-container'} style={{minHeight: '100vh'}}>
         <Grid.Column width={16}>
-          <Container textAlign='center' style={{height: '100%'}}>
-            <Header>
-              Welcome <br/>
-              to <br/>
-              Ishaz Real Estate
+          <Container>
+            <Header as="h1">
+              Let's put you
+              <br/>
+              in your dream home
             </Header>
+            <p>Come and meet a team of seasoned professionals working 
+              <br/>
+              daily to ensure your need are met
+            </p>
+            <Button size="large" color="grey">
+              Contact us
+            </Button>
             <button id="back-to-top" className="back-to-top" onClick={this.scrollToNext}>
               <Icon name='chevron down' />
             </button>

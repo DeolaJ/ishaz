@@ -74,7 +74,7 @@ class Nav extends Component {
     const { navItems, handleSidebar, mobile, navVisible } = this.props
 
     return (
-      <nav className={'nav'} style={ !this.state.scrolling ? { position: 'absolute', display: navVisible ? 'block' : 'none' } : { position: 'fixed', boxShadow: '0 1px 2px rgba(0, 0, 0, .3)', display: navVisible ? 'block' : 'none'}}>
+      <nav className={'nav'} style={ !this.state.scrolling ? { position: 'absolute', display: navVisible ? 'block' : 'none' } : { position: 'fixed', boxShadow: '-1px -1px 3px 0 #000', display: navVisible ? 'block' : 'none'}}>
         {
           !mobile ?
           <Aux>
