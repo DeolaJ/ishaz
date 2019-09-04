@@ -24,30 +24,29 @@ class Homepage extends Component {
       },
       {
         id: 3,
-        name: 'Packages',
-        link: '/packages'
+        name: 'Services',
+        link: '/services'
       },
       {
         id: 4,
-        name: 'Samples',
-        link: '/samples'
+        name: 'Projects',
+        link: '/projects'
       },
       {
         id: 5,
-        name: 'FAQs',
-        link: '/faq'
+        name: 'Our team',
+        link: '/team'
       },
       {
         id: 6,
-        name: 'Reviews',
-        link: '/recommendations'
+        name: 'Gallery',
+        link: '/gallery'
       },
-      // {
-      //   id: 7,
-      //   name: 'Contact Us',
-      //   link: '/contact',
-      //   icon: 'phone'
-      // }
+      {
+        id: 7,
+        name: 'Contact Us',
+        link: '/contact'
+      }
     ],
     animation: 'uncover',
     direction: 'left',

@@ -1,12 +1,144 @@
-.theteam-container {
-  padding-top: 80px !important;
+@import '../../../../partials/variables';
+
+.ui.grid.theteam-container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   position: relative;
 
-  .arrow {
-    font-size: 40px;
+  .section-title::before {
+    left: 50% !important;
+  }
+
+  @media (max-width: 767px) {
+    .padded-container {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
+  }
+
+  .padded-container {
+    position: relative;
+
+    .placeholder-image {
+      width: 90%;
+      margin-left: 5%;    
+      border-radius: 5px;
+      top: 3rem;
+      left: 0;
+      height: 250px;
+      position: absolute;
+      background-color: tan;
+    }
+
+    h4.header {
+      color: #444;
+      margin-top: .8rem;
+      margin-bottom: .5rem;
+    }
+
+    .blocker {
+      width: 7%; 
+      height: 100%; 
+      position: absolute;  
+      top: 0; 
+      z-index: 0; 
+      background-color: $color-paint;
+
+      &.left {
+        left: 0;
+      }
+
+      &.right {
+        right: 0;
+      }
+    }
+
+    .theteam-body {
+      text-align: center;
+    }
+
+  }
+
+  .slick-next:before, .slick-prev:before {
+    color: black;
+  }
+
+  .slick-prev, .slick-next {
+    font-size: 15px !important;
+  }
+  
+   .slick-prev:before, .slick-next:before  {
+    content: '' !important;
+  }
+
+  .slick-arrow {
+    display: inline-block; 
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
+    z-index: 1; 
+    cursor: pointer;
+    background: white;
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(35,43,48,0.06);
+    z-index: 1;
+    padding-top: 14px;
+    transition: .3s;
+    color: $color-paint;
+
+    &.right-arrow { 
+      right: 0; 
+      top: 50%;
+      padding-left: 13px;
+      transform: translateY(-50%);
+    }
+
+    &.left-arrow {
+      left: 0;
+      top: 50%;
+      padding-left: 10px;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      background-color: lighten($color-paint, 10%);
+      color: white;
+    }
+  }
+
+  .slick-slider {
+    
+    .slick-track {
+      padding-top: 2.5em;
+    }
+
+    .slick-slide {
+      transition: 0.2s ease;
+      padding-left: 2em;
+      padding-right: 2em;
+
+      .ui.segment {
+        font-size: 1.2em;
+        padding-right: 0;
+        padding-left: 0;
+        z-index: 3;
+        border-radius: 5px;
+        background: transparent;
+        border: 2px solid rgba(0,0,0,0.03);
+        box-shadow: 2px 4px 9px 1px rgba(0,0,0,0.15), 0 1px 1px rgba(0,0,0,0.15);
+        padding-top: 250px;
+
+        .segment-caption {
+          background: white;
+          border-radius: 5px;
+          padding: 3rem 1rem 1rem;
+        }
+
+        p {
+          color: #444;
+        }
+      }
+    }
   }
 }
