@@ -2,6 +2,10 @@
   padding-top: 8rem;
   padding-bottom: 4rem;
 
+  p {
+    color: white;
+  }
+
   .section-title {
     margin-bottom: 5rem;
   }
@@ -28,6 +32,10 @@
         margin-bottom: 4rem;
         padding: 2rem;
       }
+    }
+
+    .section-title {
+      margin-bottom: 4rem;
     }
 
     .section-title::before {

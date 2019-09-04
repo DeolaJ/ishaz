@@ -4,12 +4,11 @@
   position: relative;
   *:not(.icon) {
     font-family: 'Asap', 'Lato', sans-serif !important;
-    color: white;
+    color: #444;
 
     h1, h2, h3, h4, h5, h6, .ui.header,
     .header {
       font-family: 'Asap Condensed', 'Lato', sans-serif !important;
-      color: white;
 
       &.section-header {
         font-size: 30px !important;
@@ -44,7 +43,8 @@
         &.section-title {
           position: relative;
           padding-bottom: 1rem;
-          margin-bottom: 4rem;
+          margin-bottom: 2rem;
+          color: white;
         
           &::before {
             content: "";
